@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">CompassoUol</string>
+
+    <!-- Strings de Comando do Dialog -->
+    <string name="dialog_mostrar">mostrar</string>
+    <string name="dialog_atualizar">atualizar</string>
+    <string name="dialog_remover">limpar</string>
+
+    <!--  Controle  -->
+    <string name="limpar">limpar</string>
+    <string name="data">Data</string>
+    <string name="dinheiro">R$</string>
+    <string name="valor">Valor</string>
+
+
 </resources>
