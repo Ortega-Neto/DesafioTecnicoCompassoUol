@@ -11,4 +11,22 @@
         android:layout_height="match_parent">
     </androidx.recyclerview.widget.RecyclerView>
 
+    <LinearLayout
+        android:id="@+id/erroAoBuscarEventos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnBuscarEventos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/buscar_eventos"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="@drawable/botao_redondo"/>
+    </LinearLayout>
+
 </FrameLayout>

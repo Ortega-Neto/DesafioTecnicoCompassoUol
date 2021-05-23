@@ -16,4 +16,5 @@
     <!--  Demais Strings  -->
     <string name="dinheiro">R$</string>
     <string name="valor">Valor</string>
+    <string name="buscar_eventos">Buscar Eventos</string>
 </resources>

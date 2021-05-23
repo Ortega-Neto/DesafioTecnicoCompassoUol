@@ -24,16 +24,27 @@ class EventosFragment: BaseFragment(), EventosRecyclerViewClickListener {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        setupUi()
         subscribeUi()
         _viewModel.buscarEventos()
+    }
+
+    private fun setupUi(){
+        btnBuscarEventos.setOnClickListener {
+            erroAoBuscarEventos.visibility = View.GONE
+            _viewModel.buscarEventos()
+        }
     }
 
     private fun subscribeUi() {
         _viewModel.operacaoDialog.observe(viewLifecycleOwner) {
             opcoesDialog(_viewModel.operacaoDialog.value!!, _viewModel.mensagemDialog.value!!)
         }
-        _viewModel.mensagemDeErro.observe(viewLifecycleOwner, ::exibirMensagemDeErro)
-        _viewModel.eventos.observe(viewLifecycleOwner, Observer { produtos ->
+        _viewModel.mensagemDeErro.observe(viewLifecycleOwner){
+            erroAoBuscarEventos.visibility = View.VISIBLE
+            exibirMensagemDeErro(it)
+        }
+        _viewModel.eventos.observe(viewLifecycleOwner, { produtos ->
             recyclerViewEventos.also{
                 it.layoutManager = GridLayoutManager(requireContext(), 1)
                 it.setHasFixedSize(true)
