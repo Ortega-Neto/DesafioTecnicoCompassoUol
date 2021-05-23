@@ -10,6 +10,9 @@
     <string name="limpar">limpar</string>
     <string name="data">Data</string>
 
+    <!--  Mensagens Dialog  -->
+    <string name="buscando_eventos">Buscando os Eventos</string>
+
     <!--  Demais Strings  -->
     <string name="dinheiro">R$</string>
     <string name="valor">Valor</string>

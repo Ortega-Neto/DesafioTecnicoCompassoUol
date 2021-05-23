@@ -1,4 +1,4 @@
-package com.example.compassouol.utils.mvvm
+package com.example.compassouol.utils.mvvm.koin
 
 import com.example.compassouol.aplicacao.eventos.EventosViewModel
 import com.example.compassouol.api.eventos.EventosService

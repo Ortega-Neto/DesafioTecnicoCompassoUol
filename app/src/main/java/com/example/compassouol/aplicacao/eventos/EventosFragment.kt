@@ -1,14 +1,18 @@
 package com.example.compassouol.aplicacao.eventos
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.compassouol.R
+import com.example.compassouol.api.eventos.Eventos
+import com.example.compassouol.utils.mvvm.bases.BaseFragment
+import kotlinx.android.synthetic.main.eventos_fragment.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class EventosFragment : Fragment() {
+class EventosFragment: BaseFragment(), EventosRecyclerViewClickListener {
     private val _viewModel: EventosViewModel by viewModel()
 
     override fun onCreateView(
@@ -20,6 +24,25 @@ class EventosFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        subscribeUi()
+        _viewModel.buscarEventos()
     }
 
+    private fun subscribeUi() {
+        _viewModel.operacaoDialog.observe(viewLifecycleOwner) {
+            opcoesDialog(_viewModel.operacaoDialog.value!!, _viewModel.mensagemDialog.value!!)
+        }
+        _viewModel.mensagemDeErro.observe(viewLifecycleOwner, ::exibirMensagemDeErro)
+        _viewModel.eventos.observe(viewLifecycleOwner, Observer { produtos ->
+            recyclerViewEventos.also{
+                it.layoutManager = GridLayoutManager(requireContext(), 1)
+                it.setHasFixedSize(true)
+                it.adapter = EventosAdapter(produtos, this)
+            }
+        })
+    }
+
+    override fun onEventosRecyclerViewItemClickListener(view: View, evento: Eventos.EventosItem) {
+
+    }
 }

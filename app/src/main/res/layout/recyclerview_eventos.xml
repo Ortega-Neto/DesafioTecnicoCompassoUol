@@ -31,10 +31,10 @@
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="200dp"
                     android:layout_gravity="center|top"
                     android:layout_margin="10dp"
-                    app:imagem="@{evento.image}" />
+                    app:imagem="@{evento.urlImagemFormatada}" />
 
                 <TextView
                     android:id="@+id/textViewTituloDoEvento"
@@ -48,8 +48,9 @@
                     android:textAlignment="center"
                     android:text="@{evento.title}"
                     android:textColor="@color/corTextoEventos"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_margin="2dp"/>
             </LinearLayout>
 
             <LinearLayout
@@ -73,12 +74,14 @@
                     android:id="@+id/textViewDataDoEvento"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/preto"
+                    android:textColor="@color/preto"
                     android:gravity="center"
                     android:text="@{evento.dataFormatada}"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
-                    android:layout_marginBottom="5dp"/>
+                    android:layout_marginBottom="5dp"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -96,27 +99,16 @@
                     android:gravity="center">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginStart="5dp"
-                        android:layout_weight="2"
-                        android:gravity="center"
-                        android:padding="2dp"
-                        android:text="@string/dinheiro"
-                        android:textAlignment="center"
-                        android:textColor="@color/preto"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                    <TextView
                         android:id="@+id/textViewValorDoEVento"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="5dp"
                         android:layout_weight="1"
                         android:textColor="@color/preto"
-                        android:text="@{evento.precoformatado()}"/>
+                        android:text="@{evento.precoformatado()}"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center"/>
                 </LinearLayout>
             </LinearLayout>
 

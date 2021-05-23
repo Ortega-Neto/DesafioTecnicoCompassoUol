@@ -4,5 +4,5 @@ import android.view.View
 import com.example.compassouol.api.eventos.Eventos
 
 interface EventosRecyclerViewClickListener {
-    fun onProdutosRecyclerViewItemClickListener(view: View, evento: Eventos.EventosItem)
+    fun onEventosRecyclerViewItemClickListener(view: View, evento: Eventos.EventosItem)
 }

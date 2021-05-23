@@ -5,9 +5,7 @@ import kotlinx.android.parcel.Parcelize
 import java.text.NumberFormat
 import java.util.*
 
-data class Eventos(
-    val eventosItem: EventosItem
-){
+class Eventos: ArrayList<Eventos.EventosItem>() {
     @Parcelize
     data class EventosItem(
         val date: Int,
@@ -30,9 +28,14 @@ data class Eventos(
 
         fun dataFormatada(): String{
             val data = date.toString()
-            return data.substring(0, 2) +
-                    data.substring(2, 4)+
-                    data.substring(4)
+            return data.substring(0, 2) + "/" +
+                    data.substring(2, 4)+ "/" +
+                    data.substring(4, 8)
+        }
+
+        fun urlImagemFormatada(): String{
+            return if(image.contains("https")) image
+            else image.replace("http", "https")
         }
     }
 }
