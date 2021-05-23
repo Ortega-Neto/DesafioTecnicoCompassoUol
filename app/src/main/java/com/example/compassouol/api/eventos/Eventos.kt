@@ -28,9 +28,14 @@ class Eventos: ArrayList<Eventos.EventosItem>() {
 
         fun dataFormatada(): String{
             val data = date.toString()
-            return data.substring(0, 2) +
-                    data.substring(2, 4)+
-                    data.substring(4)
+            return data.substring(0, 2) + "/" +
+                    data.substring(2, 4)+ "/" +
+                    data.substring(4, 8)
+        }
+
+        fun urlImagemFormatada(): String{
+            return if(image.contains("https")) image
+            else image.replace("http", "https")
         }
     }
 }

@@ -43,6 +43,6 @@ class EventosFragment: BaseFragment(), EventosRecyclerViewClickListener {
     }
 
     override fun onEventosRecyclerViewItemClickListener(view: View, evento: Eventos.EventosItem) {
-        TODO("Not yet implemented")
+
     }
 }
