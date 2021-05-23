@@ -9,8 +9,8 @@
     <!--  Controle  -->
     <string name="limpar">limpar</string>
     <string name="data">Data</string>
+
+    <!--  Demais Strings  -->
     <string name="dinheiro">R$</string>
     <string name="valor">Valor</string>
-
-
 </resources>

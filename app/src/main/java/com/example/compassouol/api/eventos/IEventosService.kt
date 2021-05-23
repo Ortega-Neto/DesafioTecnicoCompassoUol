@@ -1,4 +1,4 @@
-package com.example.compassouol.utils.api.eventos
+package com.example.compassouol.api.eventos
 
 import retrofit2.Response
 

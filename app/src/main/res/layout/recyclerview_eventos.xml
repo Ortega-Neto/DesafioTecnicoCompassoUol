@@ -5,7 +5,7 @@
     <data>
         <variable
             name="evento"
-            type="com.example.compassouol.utils.api.eventos.Eventos.EventosItem" />
+            type="com.example.compassouol.api.eventos.Eventos.EventosItem" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -37,7 +37,7 @@
                     app:imagem="@{evento.image}" />
 
                 <TextView
-                    android:id="@+id/textViewTipoDePagamento"
+                    android:id="@+id/textViewTituloDoEvento"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -70,7 +70,7 @@
                     android:layout_margin="5dp"/>
 
                 <TextView
-                    android:id="@+id/edtInputConfirmarCelular"
+                    android:id="@+id/textViewDataDoEvento"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/preto"
@@ -96,7 +96,6 @@
                     android:gravity="center">
 
                     <TextView
-                        android:id="@+id/textViewParcelas"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -111,7 +110,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/textViewTextoParcelas"
+                        android:id="@+id/textViewValorDoEVento"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="5dp"

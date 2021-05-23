@@ -3,6 +3,8 @@
     <color name="corPrincipal">#004769</color>
     <color name="corSecundaria">#209077</color>
     <color name="corBarraDeNotificacao">#004769</color>
+    <color name="corPrincipalVariante">#1B7BA6</color>
+    <color name="corSecundariaVariante">#569783</color>
     <color name="preto">#FF000000</color>
     <color name="branco">#FFFFFFFF</color>
     <color name="corTextoEventos">#FFFFFFFF</color>

@@ -1,4 +1,4 @@
-package com.example.compassouol.utils.api.eventos
+package com.example.compassouol.api.eventos
 
 import com.example.compassouol.utils.api.ApiUtils
 import okhttp3.OkHttpClient
