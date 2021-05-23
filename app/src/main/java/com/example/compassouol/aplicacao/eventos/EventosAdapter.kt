@@ -32,7 +32,7 @@ class EventosAdapter(
         holder.recyclerviewEventoBinding.evento = eventos[position]
 
         holder.recyclerviewEventoBinding.root.setOnClickListener {
-            listenerEventos.onProdutosRecyclerViewItemClickListener(
+            listenerEventos.onEventosRecyclerViewItemClickListener(
                 holder.recyclerviewEventoBinding.textViewTituloDoEvento,
                 eventos[position]
             )

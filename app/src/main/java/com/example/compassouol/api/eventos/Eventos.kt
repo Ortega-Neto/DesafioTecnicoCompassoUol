@@ -5,9 +5,7 @@ import kotlinx.android.parcel.Parcelize
 import java.text.NumberFormat
 import java.util.*
 
-data class Eventos(
-    val eventosItem: EventosItem
-){
+class Eventos: ArrayList<Eventos.EventosItem>() {
     @Parcelize
     data class EventosItem(
         val date: Int,

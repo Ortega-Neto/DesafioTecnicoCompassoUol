@@ -6,9 +6,9 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface EventosApi {
-    @GET("/api/events")
+    @GET("events")
     suspend fun buscarEventos() : Response<Eventos>
 
-    @POST("/checkin")
+    @POST("checkin")
     suspend fun fazerCheckIn(@Body participante: Participante) : Response<Eventos>
 }

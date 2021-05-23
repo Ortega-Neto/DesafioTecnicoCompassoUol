@@ -7,7 +7,7 @@ import kotlinx.coroutines.launch
 
 class ApiUtils {
     companion object{
-        val baseURL = "http://5f5a8f24d44d640016169133.mockapi.io/api"
+        val baseURL = "https://5f5a8f24d44d640016169133.mockapi.io/api/"
 
         fun launchDataLoad(
             onFailure: (Throwable) -> Unit,
