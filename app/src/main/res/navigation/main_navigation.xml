@@ -12,7 +12,8 @@
         tools:layout="@layout/eventos_fragment" >
         <action
             android:id="@+id/action_eventosFragment_to_detalhesDoEventoFragment"
-            app:destination="@id/detalhesDoEventoFragment" />
+            app:destination="@id/detalhesDoEventoFragment"
+            app:enterAnim="@anim/modal_in" />
     </fragment>
     <fragment
         android:id="@+id/detalhesDoEventoFragment"
