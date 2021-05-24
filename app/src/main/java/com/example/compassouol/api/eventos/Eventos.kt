@@ -1,12 +1,9 @@
 package com.example.compassouol.api.eventos
 
-import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
 import java.text.NumberFormat
 import java.util.*
 
 class Eventos: ArrayList<Eventos.EventosItem>() {
-    @Parcelize
     data class EventosItem(
         val date: Int,
         val description: String,
@@ -17,7 +14,7 @@ class Eventos: ArrayList<Eventos.EventosItem>() {
         val people: List<String>,
         val price: Double,
         val title: String
-    ): Parcelable {
+    ) {
         fun precoformatado(): String {
             val format: NumberFormat = NumberFormat.getCurrencyInstance()
             val ptBr = Locale("pt", "BR")

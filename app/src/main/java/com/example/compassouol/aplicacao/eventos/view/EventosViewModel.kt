@@ -1,4 +1,4 @@
-package com.example.compassouol.aplicacao.eventos
+package com.example.compassouol.aplicacao.eventos.view
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -15,8 +15,8 @@ class EventosViewModel(
     private val eventosService: IEventosService
 ): BaseViewModel(){
 
-    val eventos: LiveData<List<Eventos.EventosItem>> get() = _eventos
-    private val _eventos = MutableLiveData<List<Eventos.EventosItem>>()
+    val eventos: LiveData<Eventos> get() = _eventos
+    private val _eventos = MutableLiveData<Eventos>()
 
     fun buscarEventos(){
         _mensagemDialog.value = R.string.buscando_eventos

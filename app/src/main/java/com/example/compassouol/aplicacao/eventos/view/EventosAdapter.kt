@@ -1,4 +1,4 @@
-package com.example.compassouol.aplicacao.eventos
+package com.example.compassouol.aplicacao.eventos.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,7 +9,7 @@ import com.example.compassouol.api.eventos.Eventos
 import com.example.compassouol.databinding.RecyclerviewEventosBinding
 
 class EventosAdapter(
-    private val eventos: List<Eventos.EventosItem>,
+    private val eventos: Eventos,
     private val listenerEventos: EventosRecyclerViewClickListener
 ): RecyclerView.Adapter<EventosAdapter.EventosViewHolder>() {
 
@@ -33,7 +33,7 @@ class EventosAdapter(
 
         holder.recyclerviewEventoBinding.root.setOnClickListener {
             listenerEventos.onEventosRecyclerViewItemClickListener(
-                holder.recyclerviewEventoBinding.textViewTituloDoEvento,
+                holder.recyclerviewEventoBinding.textViewNomeDoEvento,
                 eventos[position]
             )
         }

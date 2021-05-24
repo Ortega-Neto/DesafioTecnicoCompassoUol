@@ -6,14 +6,31 @@
     <string name="dialog_atualizar">atualizar</string>
     <string name="dialog_remover">limpar</string>
 
+    <!--  Nome das telas  -->
+    <string name="lista_de_eventos">Lista de Eventos</string>
+    <string name="dados_do_evento">Dados do Evento</string>
+
     <!--  Controle  -->
     <string name="limpar">limpar</string>
     <string name="data">Data</string>
 
     <!--  Mensagens Dialog  -->
     <string name="buscando_eventos">Buscando os Eventos</string>
+    <string name="realizar_chek_in">Realizando Check-In</string>
+
+    <!--  Erros EditText  -->
+    <string name="erro_campo_vazio">Campo não pode ser vazio</string>
+    <string name="erro_email">Digite um email válido</string>
 
     <!--  Demais Strings  -->
     <string name="dinheiro">R$</string>
     <string name="valor">Valor</string>
+    <string name="buscar_eventos">Buscar Eventos</string>
+    <string name="saiba_mais">Saiba mais</string>
+    <string name="descricao_do_evento">Descrição do Evento</string>
+    <string name="fazer_check_in">Fazer Check-In</string>
+    <string name="compartilhar">Compartilhar</string>
+    <string name="nome">Nome</string>
+    <string name="email">Email</string>
+    <string name="enviar">Enviar</string>
 </resources>

@@ -7,7 +7,17 @@
 
     <fragment
         android:id="@+id/eventosFragment"
-        android:name="com.example.compassouol.aplicacao.eventos.EventosFragment"
+        android:name="com.example.compassouol.aplicacao.eventos.view.EventosFragment"
         android:label="eventos_fragment"
-        tools:layout="@layout/eventos_fragment" />
+        tools:layout="@layout/eventos_fragment" >
+        <action
+            android:id="@+id/action_eventosFragment_to_detalhesDoEventoFragment"
+            app:destination="@id/detalhesDoEventoFragment"
+            app:enterAnim="@anim/modal_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalhesDoEventoFragment"
+        android:name="com.example.compassouol.aplicacao.detalhesDoEvento.view.DetalhesDoEventoFragment"
+        android:label="detalhes_do_evento_fragment"
+        tools:layout="@layout/detalhes_do_evento_fragment" />
 </navigation>
