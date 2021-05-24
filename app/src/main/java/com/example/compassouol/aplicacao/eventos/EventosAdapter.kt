@@ -9,7 +9,7 @@ import com.example.compassouol.api.eventos.Eventos
 import com.example.compassouol.databinding.RecyclerviewEventosBinding
 
 class EventosAdapter(
-    private val eventos: List<Eventos.EventosItem>,
+    private val eventos: Eventos,
     private val listenerEventos: EventosRecyclerViewClickListener
 ): RecyclerView.Adapter<EventosAdapter.EventosViewHolder>() {
 

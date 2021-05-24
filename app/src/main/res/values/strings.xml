@@ -18,4 +18,5 @@
     <string name="valor">Valor</string>
     <string name="buscar_eventos">Buscar Eventos</string>
     <string name="saiba_mais">Saiba mais</string>
+    <string name="descricao_do_evento">Descrição do Evento</string>
 </resources>

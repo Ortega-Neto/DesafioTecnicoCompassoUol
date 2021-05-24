@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.compassouol.R
 import com.example.compassouol.api.eventos.Eventos
@@ -44,16 +44,19 @@ class EventosFragment: BaseFragment(), EventosRecyclerViewClickListener {
             erroAoBuscarEventos.visibility = View.VISIBLE
             exibirMensagemDeErro(it)
         }
-        _viewModel.eventos.observe(viewLifecycleOwner, { produtos ->
+        _viewModel.eventos.observe(viewLifecycleOwner, { eventos ->
             recyclerViewEventos.also{
                 it.layoutManager = GridLayoutManager(requireContext(), 1)
                 it.setHasFixedSize(true)
-                it.adapter = EventosAdapter(produtos, this)
+                it.adapter = EventosAdapter(eventos, this)
             }
         })
     }
 
     override fun onEventosRecyclerViewItemClickListener(view: View, evento: Eventos.EventosItem) {
-
+        evento.also {
+            val action = EventosFragmentDirections.actionEventosFragmentToDetalhesDoEventoFragment()
+            findNavController().navigate(action)
+        }
     }
 }
