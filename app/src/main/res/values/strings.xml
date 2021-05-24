@@ -6,6 +6,10 @@
     <string name="dialog_atualizar">atualizar</string>
     <string name="dialog_remover">limpar</string>
 
+    <!--  Nome das telas  -->
+    <string name="lista_de_eventos">Lista de Eventos</string>
+    <string name="dados_do_evento">Dados do Evento</string>
+
     <!--  Controle  -->
     <string name="limpar">limpar</string>
     <string name="data">Data</string>

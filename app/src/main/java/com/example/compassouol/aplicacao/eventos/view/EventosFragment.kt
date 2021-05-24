@@ -26,6 +26,7 @@ class EventosFragment: BaseFragment(), EventosRecyclerViewClickListener {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        requireActivity().title = getString(R.string.lista_de_eventos)
         setupUi()
         subscribeUi()
         _viewModel.buscarEventos()

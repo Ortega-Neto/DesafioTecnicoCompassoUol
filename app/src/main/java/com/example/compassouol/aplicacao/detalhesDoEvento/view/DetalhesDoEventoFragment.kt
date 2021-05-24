@@ -13,6 +13,7 @@ import com.example.compassouol.aplicacao.detalhesDoEvento.view.dialog.DialogDado
 import com.example.compassouol.aplicacao.eventos.model.EventoSelecionado.Companion.eventoSelecionado
 import com.example.compassouol.aplicacao.main.MainActivity
 import com.example.compassouol.utils.api.ApiUtils.Companion.baseURL
+import com.example.compassouol.utils.imagemBiding.ImagemBidingUtils.Companion.inserirImagemNoImageView
 import com.example.compassouol.utils.mvvm.bases.BaseFragment
 import kotlinx.android.synthetic.main.detalhes_do_evento_fragment.*
 import kotlinx.android.synthetic.main.eventos_fragment.*
@@ -30,13 +31,14 @@ class DetalhesDoEventoFragment: BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        requireActivity().title = getString(R.string.dados_do_evento)
         preencherDadosDoEvento()
         setupUi()
         subscribeUi()
     }
 
     private fun preencherDadosDoEvento(){
-//        imageViewImagemDoEvento.setImageURI(eventoSelecionado.urlImagem)
+        inserirImagemNoImageView(imageViewImagemDoEvento, eventoSelecionado.urlImagem, requireContext())
         textViewTituloDoEvento.text = eventoSelecionado.titulo
         textViewDataDoEvento.text = eventoSelecionado.data
         textViewValorDoEVento.text = eventoSelecionado.preco
