@@ -1,11 +1,9 @@
-package com.example.compassouol.aplicacao.detalhesDoEvento
+package com.example.compassouol.aplicacao.detalhesDoEvento.view
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.navArgs
 import com.example.compassouol.R
 import com.example.compassouol.utils.mvvm.bases.BaseFragment
 import org.koin.androidx.viewmodel.ext.android.viewModel

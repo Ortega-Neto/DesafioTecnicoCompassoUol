@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/detalhesDoEventoFragment"
-        android:name="com.example.compassouol.aplicacao.detalhesDoEvento.DetalhesDoEventoFragment"
+        android:name="com.example.compassouol.aplicacao.detalhesDoEvento.view.DetalhesDoEventoFragment"
         android:label="detalhes_do_evento_fragment"
         tools:layout="@layout/detalhes_do_evento_fragment" />
 </navigation>
