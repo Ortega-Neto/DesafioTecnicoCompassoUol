@@ -37,7 +37,7 @@
                     app:imagem="@{evento.urlImagemFormatada}" />
 
                 <TextView
-                    android:id="@+id/textViewTituloDoEvento"
+                    android:id="@+id/textViewNomeDoEvento"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -71,7 +71,6 @@
                     android:layout_margin="5dp"/>
 
                 <TextView
-                    android:id="@+id/textViewDataDoEvento"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/preto"
@@ -93,7 +92,6 @@
                     android:layout_margin="5dp"/>
 
                 <TextView
-                    android:id="@+id/textViewValorDoEVento"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"

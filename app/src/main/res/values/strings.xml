@@ -19,4 +19,6 @@
     <string name="buscar_eventos">Buscar Eventos</string>
     <string name="saiba_mais">Saiba mais</string>
     <string name="descricao_do_evento">Descrição do Evento</string>
+    <string name="fazer_check_in">Fazer Check-In</string>
+    <string name="compartilhar">Compartilhar</string>
 </resources>
