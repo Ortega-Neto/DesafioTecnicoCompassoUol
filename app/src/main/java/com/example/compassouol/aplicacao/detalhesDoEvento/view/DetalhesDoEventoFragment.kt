@@ -6,10 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.compassouol.R
 import com.example.compassouol.utils.mvvm.bases.BaseFragment
+import kotlinx.android.synthetic.main.detalhes_do_evento_fragment.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class DetalhesDoEventoFragment: BaseFragment() {
-    private val viewModel: DetalhesDoEventoViewModel by viewModel()
+    private val _viewModel: DetalhesDoEventoViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -20,7 +21,15 @@ class DetalhesDoEventoFragment: BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        print("a")
+        preencherDadosDoEvento()
+    }
+
+    private fun preencherDadosDoEvento(){
+//        imageViewImagemDoEvento
+        textViewTituloDoEvento.text = "Teste"
+        textViewDataDoEvento.text = "00/00/0000"
+        textViewValorDoEVento.text = "R$ 00,00"
+        textViewDescricaoDoEVento.text = "Descrição"
     }
 
 }

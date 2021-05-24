@@ -54,9 +54,8 @@ class EventosFragment: BaseFragment(), EventosRecyclerViewClickListener {
     }
 
     override fun onEventosRecyclerViewItemClickListener(view: View, evento: Eventos.EventosItem) {
-        evento.also {
-            val action = EventosFragmentDirections.actionEventosFragmentToDetalhesDoEventoFragment()
-            findNavController().navigate(action)
-        }
+        val action = EventosFragmentDirections.
+        actionEventosFragmentToDetalhesDoEventoFragment()
+        findNavController().navigate(action)
     }
 }
