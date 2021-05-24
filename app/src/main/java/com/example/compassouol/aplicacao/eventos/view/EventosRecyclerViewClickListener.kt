@@ -1,4 +1,4 @@
-package com.example.compassouol.aplicacao.eventos
+package com.example.compassouol.aplicacao.eventos.view
 
 import android.view.View
 import com.example.compassouol.api.eventos.Eventos

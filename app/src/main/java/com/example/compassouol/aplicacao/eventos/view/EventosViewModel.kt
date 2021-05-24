@@ -1,4 +1,4 @@
-package com.example.compassouol.aplicacao.eventos
+package com.example.compassouol.aplicacao.eventos.view
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -1,4 +1,4 @@
-package com.example.compassouol.aplicacao.eventos
+package com.example.compassouol.aplicacao.eventos.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.compassouol.R
 import com.example.compassouol.api.eventos.Eventos
+import com.example.compassouol.aplicacao.eventos.model.EventoSelecionado
+import com.example.compassouol.aplicacao.eventos.model.EventoSelecionado.Companion.eventoSelecionado
 import com.example.compassouol.utils.mvvm.bases.BaseFragment
 import kotlinx.android.synthetic.main.eventos_fragment.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -54,6 +56,16 @@ class EventosFragment: BaseFragment(), EventosRecyclerViewClickListener {
     }
 
     override fun onEventosRecyclerViewItemClickListener(view: View, evento: Eventos.EventosItem) {
+        eventoSelecionado = EventoSelecionado.DadosDoEvento(
+            data = evento.dataFormatada(),
+            descricao = evento.description,
+            id = evento.id,
+            urlImagem = evento.urlImagemFormatada(),
+            pessoas = evento.people,
+            preco = evento.precoformatado(),
+            titulo = evento.title
+        )
+
         val action = EventosFragmentDirections.
         actionEventosFragmentToDetalhesDoEventoFragment()
         findNavController().navigate(action)

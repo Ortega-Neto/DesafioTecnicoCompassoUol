@@ -13,19 +13,18 @@ import kotlinx.coroutines.withContext
 
 class DetalhesDoEventoViewModel(
     private val eventosService: IEventosService
-) : BaseViewModel() {
+): BaseViewModel() {
 
     val checkIn: LiveData<Boolean> get() = _checkIn
     private val _checkIn = MutableLiveData<Boolean>()
 
     fun fazerCheckInNoEvento(participante: Participante){
-        _mensagemDialog.value = R.string.buscando_eventos
+        _mensagemDialog.value = R.string.realizar_chek_in
         _operacaoDialog.value = R.string.dialog_mostrar
 
         _job = ApiUtils.launchDataLoad(::onChamadaDeApiError) {
             val resposta = eventosService.fazerCheckIn(participante)
             if (resposta.isSuccessful) {
-                val eventos = resposta.body()
                 withContext(Dispatchers.Main){
                     _operacaoDialog.value = R.string.dialog_remover
                     _checkIn.value = true

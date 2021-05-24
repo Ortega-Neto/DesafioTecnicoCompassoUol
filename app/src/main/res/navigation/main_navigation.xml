@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/eventosFragment"
-        android:name="com.example.compassouol.aplicacao.eventos.EventosFragment"
+        android:name="com.example.compassouol.aplicacao.eventos.view.EventosFragment"
         android:label="eventos_fragment"
         tools:layout="@layout/eventos_fragment" >
         <action
