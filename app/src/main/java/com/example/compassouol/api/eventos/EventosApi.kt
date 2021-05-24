@@ -10,5 +10,5 @@ interface EventosApi {
     suspend fun buscarEventos() : Response<Eventos>
 
     @POST("checkin")
-    suspend fun fazerCheckIn(@Body participante: Participante) : Response<Eventos>
+    suspend fun fazerCheckIn(@Body participante: Participante) : Response<RespostaCheckIn>
 }

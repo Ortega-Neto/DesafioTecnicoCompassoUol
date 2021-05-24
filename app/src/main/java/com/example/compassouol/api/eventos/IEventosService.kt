@@ -4,5 +4,5 @@ import retrofit2.Response
 
 interface IEventosService {
     suspend fun buscarEventos(): Response<Eventos>
-    suspend fun fazerCheckIn(participante: Participante): Response<Eventos>
+    suspend fun fazerCheckIn(participante: Participante): Response<RespostaCheckIn>
 }

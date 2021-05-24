@@ -24,6 +24,6 @@ class EventosService: IEventosService {
     override suspend fun buscarEventos(): Response<Eventos> =
         api.buscarEventos()
 
-    override suspend fun fazerCheckIn(participante: Participante): Response<Eventos> =
+    override suspend fun fazerCheckIn(participante: Participante): Response<RespostaCheckIn> =
         api.fazerCheckIn(participante = participante)
 }
